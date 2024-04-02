@@ -10,7 +10,7 @@
         switch (choice)
         {
             case 1:
-                Addition_Neko();
+                Addition_Nek();
                 break;
             case 2:
                 Subtraction();
@@ -23,7 +23,7 @@
                 break;
         }
         
-        static void Addition_Neko()
+        static void Addition_Nek()
         {
             Console.WriteLine("Enter the first number:");
             double num1 = Convert.ToDouble(Console.ReadLine());
