@@ -5,6 +5,8 @@
         Console.WriteLine("2. Subtraction");
         Console.WriteLine("3. Multiplication");
         Console.WriteLine("4. Division");
+        Console.WriteLine("5. Square of a number");
+        Console.WriteLine("6. Square root of a number");
         Console.WriteLine("0. Exit");
 
         int choice = Convert.ToInt32(Console.ReadLine());
@@ -22,6 +24,12 @@
                 break;
             case 4:
                 Division();
+                break;
+            case 5:
+                Square();
+                break;
+            case 6:
+                SquareRoot();
                 break;
             case 0:
                 Console.WriteLine("Exiting the program. Goodbye!");
@@ -70,6 +78,26 @@
             else
             {
                 Console.WriteLine($"Result: {num1 / num2}");
+            }
+        }
+        static void Square()
+        {
+            Console.WriteLine("Enter the number:");
+            double num = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine($"Result: {num * num}");
+        }
+
+        static void SquareRoot()
+        {
+            Console.WriteLine("Enter the number:");
+            double num = Convert.ToDouble(Console.ReadLine());
+            if (num < 0)
+            {
+                Console.WriteLine("Error: Square root of a negative number is not allowed.");
+            }
+            else
+            {
+                Console.WriteLine($"Result: {Math.Sqrt(num)}");
             }
         }
     }
